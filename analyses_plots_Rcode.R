@@ -43,6 +43,7 @@ hyb<-droplevels(hybrids)
 hyb$factor<-factor(hyb$V1, levels=c("BLD","BCR","BIC","BNP","BTB","FRC","PIN","PSP","RDL","RNV","DBS"))
 
 
+## pca
 ## plot map, pca and barplot
 pt_colors=c('#999999','#E69F00', '#56B4E9',"yellowgreen")
 library(ggplot2)
@@ -53,6 +54,7 @@ family<-as.factor(pops$V1)
 usa <- map_data("usa")
 state_dat<-map_data("state")
 map_dat<-rbind(state_dat,usa)
+
 p0 <- ggplot() +
   geom_polygon(data=map_dat,aes(x=long,y=lat,group=group, fill=region),fill="white",color="black", show.legend=FALSE) +
   coord_map("gilbert",xlim=c(-116,-105),ylim=c(40,49)) +
