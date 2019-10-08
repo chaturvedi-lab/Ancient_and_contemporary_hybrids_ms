@@ -6,7 +6,7 @@ use strict;
 # filter vcf files based on coverage
 # Written by Zach Gompert, modified by Samridhi Chaturvedi
 
-# usage vcfFilter.pl infile.vcf
+# usage filterVCF2.pl infile.vcf
 #
 # change the marked variables below to adjust settings
 #
