@@ -1,9 +1,17 @@
 #!/usr/bin/env bash
+#! /bin/bash
 
-#use samtools version 1.5
+# written by Samridhi Chaturvedi
+# this script parses through the current directoy and converts all the .bam files to .sam files. It then sorts and indexes the sam files.
+# I use samtools version 1.5 in this script.
 
 module load samtools 
 
-samtools view -b -S -o mem_sample1.bam
-samtools sort mem_sample1.bam -o mem_sample1_sorted.bam
-samtools index mem_sample1_sorted.bam
+for file in *.bam;
+do
+
+samtools view -b -S -o $out"."bam $file"
+samtools sort $out"."bam -o $out"."sorted.bam"
+samtools index $out"."sorted.bam"
+
+done
