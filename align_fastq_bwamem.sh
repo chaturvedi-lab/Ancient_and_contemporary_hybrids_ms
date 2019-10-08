@@ -6,9 +6,9 @@ module load bwa
 #-k =  minimum seed length [19]
 #-r = look for internal seeds inside a seed longer than {-k} * FLOAT [1.5]
 #-T = minimum score to output [30]
-#$genome = dovetail genome
-#$file = fastq files
+#genome = lycaeidesmelissa.fasta
+#fastq file = sample1.fastq
 
 
-bwa mem -t 12 -k 15 -r 1.3 -T 30 $genome $file > mem"."$file".".sam
+bwa mem -t 12 -k 15 -r 1.3 -T 30 lycaeidesmelissa.fasta sample1.fastq > mem_sample1.sam
 
