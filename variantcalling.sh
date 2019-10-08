@@ -1,4 +1,11 @@
 #!/usr/bin/env bash
+#! /bin/bash
+
+# written by Samridhi Chaturvedi
+# this script parses through the bam files in the current directoy and creates a bcf file. It then converts the bcf file to vcf format.
+# I use samtools version 1.5 and bcftools version 1.6 in this script.
+
+#In this script replace the path to the genome with your file path given by option -f.
 
 module load samtools
 module load bcftools
