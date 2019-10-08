@@ -4,6 +4,6 @@
 
 module load samtools 
 
-samtools view -b -S -o $out"."bam $file"
-samtools sort $out"."bam -o $out"."sorted.bam"
-samtools index $out"."sorted.bam"
+samtools view -b -S -o mem_sample1.bam
+samtools sort mem_sample1.bam -o mem_sample1_sorted.bam
+samtools index mem_sample1_sorted.bam
