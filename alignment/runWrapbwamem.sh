@@ -11,7 +11,8 @@
 #SBATCH --partition=usubio-kp #specify computer cluster, other option is kinspeak
 
 
-cd /uufs/chpc.utah.edu/common/home/gompert-group1/data/lycaeides/lycaeides_dubois/Alignments/fastqfiles
+#change this directory to working directory 
+cd ./fastqfiles
 
 module load perl
 module load bwa
