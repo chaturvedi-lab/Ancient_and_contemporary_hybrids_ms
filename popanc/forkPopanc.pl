@@ -9,8 +9,9 @@ use Parallel::ForkManager;
 my $max = shift(@ARGV); #get number of cores to use at one time
 my $pm = Parallel::ForkManager->new($max);
 
+#specify path to input files directory
 my $indir = "./";
-#modify this directory
+#specify path to output files directory
 my $outdir = "./outfiles/";
 my @w = (3,5,7);
 my @hpops = ("BLD","BIC");
@@ -21,8 +22,10 @@ foreach my $w (@w){
 #CHAINS:
         foreach my $pop (@hpops){
                 my $base = $mel . '_' . $idas . '_' . $pop . '_' . $w;
+                #specify path to popanc program
                 print "/uufs/chpc.utah.edu/common/home/u6000989/bin/popanc -o $outdir"."out_$base.hdf5 -n $w -d 15000 -m 10000 -b 5000 -t 10 -s 1 -q 1 -z 1 ./idas.txt ./melissa.txt ./lyc_genoest_$pop.txt";
                 #system"sleep 2\n";
+                #specify path to popanc program
                 system "/uufs/chpc.utah.edu/common/home/u6000989/bin/popanc -o $outdir"."out_$base.hdf5 -n $w -d 15000 -m 10000 -b 5000 -t 10 -s 1 -q 1 -z 1 ./idas.txt ./melissa.txt ./lyc_genoest_$pop.txt"";
                         $pm->finish; ##exit the child process
         }
