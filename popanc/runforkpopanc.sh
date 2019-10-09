@@ -14,5 +14,6 @@ module load gsl
 module load hdf5
 module load perl
 
+#specify path to working directory
 cd /uufs/chpc.utah.edu/common/home/u6007910/projects/lyc_dubois/popanc/
 perl ./forkrunpopanc.pl 10
