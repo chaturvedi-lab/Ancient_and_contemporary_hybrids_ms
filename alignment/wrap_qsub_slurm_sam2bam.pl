@@ -31,7 +31,7 @@ my $email = 'samridhi.chaturvedi@gmail.com'; ## e-mail this address if the job f
 
 ## build array of jobs to be run individually (serially) by slurm
 ##specify directory for sam files
-my $dir = '/uufs/chpc.utah.edu/common/home/u6007910/projects/lyc_dubois/lycaeides_dubois/Alignments/samfiles';
+my $dir = './';
 
 my @jobarray;
 my $out;
